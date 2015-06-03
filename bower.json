@@ -1,0 +1,18 @@
+{
+  "name": "Base",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dn1o/Base",
+  "authors": [
+    "dn1o <dngvozdenovic@gmail.com>"
+  ],
+  "description": "gulp, sass, susy, breakpoint",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
