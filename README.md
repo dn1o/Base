@@ -1,10 +1,7 @@
-# Base
+# base
 light weight static site base setup
 
 Dependencies
-*node
-*gulp
+* Node
+* Gulp
 
-#How to install 
-
-Clone and run npm install
