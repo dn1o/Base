@@ -1,31 +1,29 @@
 {
-  "name": "Base",
-  "version": "0.0.0",
-  "description": "Front-End Base",
-  "main": "index.js",
+  "name": "base",
+  "version": "0.0.1",
+  "description": "Base npm front-end package",
+  "main": "index.html",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dn1o/Base.git"
+    "url": "git+https://github.com/dn1o/Base.git"
   },
   "keywords": [
-    "gulp",
-    "sass",
-    "livereload",
-    "susy",
-    "breakpoint"
+    "front-end",
+    "minimal"
   ],
-  "author": "Danilo",
-  "license": "ISC",
+  "author": "dn1o",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dn1o/Base/issues"
   },
-  "homepage": "https://github.com/dn1o/Base",
+  "homepage": "https://github.com/dn1o/Base#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp-live-server": "0.0.29",
+    "gulp-myth": "^1.0.3",
+    "normalize.css": "^3.0.3"
   }
 }

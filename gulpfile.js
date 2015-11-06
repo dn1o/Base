@@ -1,22 +1,27 @@
-var gulp = require ('gulp');
-var sass = require ('gulp-sass');
-var webserver = require('gulp-webserver');
- 
-gulp.task('webserver', function() {
-  gulp.src('')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: true,
-      open: true
-    }));
-});
-gulp.task('sass', function(){
-	gulp.src('sass/*.scss')
-	.pipe(sass())
-	.pipe(gulp.dest('css'));
-});
-gulp.task('watch', function (){
-	gulp.watch('sass/*.scss', ['sass']);
+var gulp = require('gulp');
+    myth = require('gulp-myth');
+    gls = require('gulp-live-server');
+
+var server = gls.static('/', 8888);
+    server.start();
+gulp.task('myth', function(){
+  return gulp.src('myth/*.css')
+    .pipe(myth())
+    .on('error', swallowError)
+    .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['webserver', 'sass', 'watch']);
+function swallowError (error) {
+
+  // If you want details of the error in the console
+  console.log(error.toString());
+
+  this.emit('end');
+}
+
+gulp.task('watch', function(){
+  gulp.watch('myth/*.css', ['myth']);
+  gulp.watch(['myth/*.css', '*.html'], function (file) {
+    server.notify.apply(server, [file]);
+  });
+});
